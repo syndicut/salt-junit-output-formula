@@ -1,0 +1,6 @@
+{% set template = salt['grains.filter_by']({
+    'default': {
+        'extmod_dir': 'srv/modules',
+        'add_extmode_config': False,
+    },
+}, merge=salt['pillar.get']('salt_junit_output:lookup')) %}

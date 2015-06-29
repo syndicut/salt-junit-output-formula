@@ -1,0 +1,4 @@
+salt-junit-output:
+  lookup:
+    extmode_dir: srv/modules
+    add_extmode_config: True
