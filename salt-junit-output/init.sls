@@ -3,6 +3,7 @@
 {{ salt_junit_output.extmod_dir }}/output/junit.py:
   file.managed:
     - source: salt://salt-junit-output/files/junit.py
+    - makedirs: True
 
 {% if salt_junit_output.add_extmode_config %}
 /etc/salt/master.d/99-extension_modules.conf:
