@@ -11,7 +11,7 @@
     - source: salt://salt-junit-output/files/99-extension_modules.conf
     - template: jinja
     - defaults:
-      extmode_dir: {{ salt_junit_output.extmod_dir }}
+        extmode_dir: {{ salt_junit_output.extmod_dir }}
 
 salt_junit_output_salt-master:
   service.running:
