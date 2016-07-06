@@ -1,4 +1,4 @@
-{% from "salt-junit-output/map.jinja" import template with context %}
+{% from "salt-junit-output/map.jinja" import salt_junit_output with context %}
 
 {{ salt_junit_output.extmod_dir }}/output/junit.py:
   file.managed:
