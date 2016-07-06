@@ -1,6 +1,6 @@
 {% from "salt-junit-output/map.jinja" import salt_junit_output with context %}
 
-{{ salt_junit_output.extmod_dir }}/output/junit.py:
+/{{ salt_junit_output.extmod_dir }}/output/junit.py:
   file.managed:
     - source: salt://salt-junit-output/files/junit.py
     - makedirs: True
