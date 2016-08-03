@@ -56,4 +56,4 @@ def output(data):
                     test_case_element.append(syserr_element)
 
                 root.append(test_case_element)
-        return xml.tostring(root)
+    return xml.tostring(root)
