@@ -6,8 +6,8 @@ from salt.utils.yamldumper import OrderedDumper
 import xml.etree.ElementTree as xml
 log = logging.getLogger(__name__)
 
-def _format_host(host):
-    return host.replace('.','_')
+def _format(string):
+    return string.replace('.','_')
 
 def _text_node(name, text):
     element = xml.Element(name)
@@ -37,8 +37,8 @@ def output(data):
                 return xml.tostring(root)
 
         for key, state in hostdata.iteritems():
-                classname = _format_host(host)
-                name = state['name']
+                classname = _format(host)
+                name = _format(state['name'])
                 time = str(round(state['duration']/1000,3))
                 test_case_element = _test_case(classname, name, time)
                 sysout_element = _text_node("system-out", state['comment'])
